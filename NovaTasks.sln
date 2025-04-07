@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NovaTasks", "NovaTasks\NovaTasks.csproj", "{5894911D-9BB0-428D-BF43-28E73476DB33}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NovaTasks.Models", "NovaTasks.Models\NovaTasks.Models.csproj", "{1DD6EC3E-7F9A-4EE2-9E85-11E4DE04B836}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{5894911D-9BB0-428D-BF43-28E73476DB33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5894911D-9BB0-428D-BF43-28E73476DB33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5894911D-9BB0-428D-BF43-28E73476DB33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DD6EC3E-7F9A-4EE2-9E85-11E4DE04B836}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DD6EC3E-7F9A-4EE2-9E85-11E4DE04B836}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DD6EC3E-7F9A-4EE2-9E85-11E4DE04B836}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DD6EC3E-7F9A-4EE2-9E85-11E4DE04B836}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
