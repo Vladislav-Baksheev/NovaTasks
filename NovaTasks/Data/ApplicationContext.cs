@@ -15,6 +15,11 @@ public class ApplicationContext : DbContext
     public DbSet<Label> Labels { get; set; }
     public DbSet<TaskLabel> TaskLabels { get; set; }
 
+    public ApplicationContext()
+    {
+        Database.EnsureCreated();
+    }
+    
     public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options) { }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

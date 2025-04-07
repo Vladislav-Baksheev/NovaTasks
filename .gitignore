@@ -362,7 +362,7 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 
-NiceApteka/appsettings.json
+NovaTasks/appsettings.json
 
 # Default ignored files
 /shelf/
@@ -371,7 +371,7 @@ NiceApteka/appsettings.json
 /modules.xml
 /contentModel.xml
 /projectSettingsUpdater.xml
-/.idea.NiceApteka.iml
+/.idea.NovaTasks.iml
 # Editor-based HTTP Client requests
 /httpRequests/
 # Datasource local storage ignored files
