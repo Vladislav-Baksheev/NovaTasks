@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using NovaTasks.Business;
+using NovaTasks.Business.Services;
 using NovaTasks.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +12,8 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddDbContext<ApplicationContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddScoped<RequestEnvironment>();
+builder.Services.AddScoped<WorkspaceService>();
 
 var app = builder.Build();
 
