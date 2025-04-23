@@ -18,7 +18,7 @@ public class WorkspaceService(
         return workspaces;
     }
 
-    public async Task<string> AddWorkspace(Workspace workspace)
+    public async Task<Workspace> AddWorkspace(Workspace workspace)
     {
         var entity = new Workspace
         {
@@ -28,6 +28,37 @@ public class WorkspaceService(
         await context.Workspaces.AddAsync(entity);
         await context.SaveChangesAsync();
         
-        return entity.Name;
+        return entity;
+    }
+    
+    public async Task DeleteWorkspace(Workspace workspace)
+    {
+        var entity = await context.Workspaces
+            .FirstOrDefaultAsync(w => w.WorkspaceId == workspace.WorkspaceId);
+
+        if (entity == null)
+        {
+            throw new Exception("Workspace not found");
+        }
+        context.Workspaces.Remove(entity);
+        
+        await context.SaveChangesAsync();
+    }
+    
+    public async Task EditWorkspace(Workspace workspace)
+    {
+        var entity = await context.Workspaces
+            .FirstOrDefaultAsync(w => w.WorkspaceId == workspace.WorkspaceId);
+
+        if (entity == null)
+        {
+            throw new Exception("Workspace not found");
+        }
+
+        // Обновление полей
+        entity.Name = workspace.Name;
+        entity.Visibility = workspace.Visibility;
+        
+        await context.SaveChangesAsync();
     }
 }

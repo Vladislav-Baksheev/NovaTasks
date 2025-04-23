@@ -1,6 +1,0 @@
-@NovaTasks_HostAddress = http://localhost:5077
-
-GET {{NovaTasks_HostAddress}}//tasks/
-Accept: application/json
-
-###

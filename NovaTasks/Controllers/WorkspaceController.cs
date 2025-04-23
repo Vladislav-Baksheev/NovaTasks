@@ -16,7 +16,7 @@ public class WorkspaceController(WorkspaceService workspaceService) : Controller
     
     [Route("/addworkspace")]
     [HttpPost]
-    public async Task<string> AddWorkspace([FromBody]Workspace workspace)
+    public async Task<Workspace> AddWorkspace([FromBody]Workspace workspace)
     {
         var entity = await workspaceService.AddWorkspace(workspace);
         return entity;
